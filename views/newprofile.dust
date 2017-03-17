@@ -1,0 +1,71 @@
+{>"base"/}
+{<bodyContent}
+   <div class="row">
+        <div class="col m12">
+          <h3>Build A new Profile</h3>
+              <form class="col s12" method="POST" action="/save"   enctype="multipart/form-data">
+              <input type='hidden' name='_csrf' value="{_csrf}" id="userForm">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="txtName"  name="txtName" type="text">
+                    <label for="txtName">Full Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                   <textarea id="txtBio"  name="txtBio" class="materialize-textarea"></textarea>
+                    <label for="txtBio">Short bio</label>
+                    </div>
+                     <div class="input-field col s12" style="padding-top:50px">
+                        <i class="material-icons prefix">account_box</i>
+                        <input name="profile" id="profile" name="profile "type="file"> 
+                    </div>
+                    
+                    <div class="input-field col s12" style="padding-top:50px">
+                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    <input id="txtGitLink"  name="txtGitLink" type="text">
+                    </div>
+                    <div class="input-field col s12">
+                    <i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i>
+                    <input id="txtStack"  name="txtStack" type="text">
+                    </div>
+                    <div class="input-field col s12">
+                    <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                    <input id="txtLinkedin"  name="txtLinkedin" type="text">
+                    </div>
+                    <div class="input-field col s12">
+                    <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                    <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">
+                    </div>
+                  <div class="col m12">
+                  <h4>Skills Sets</h4>
+                    <a class="waves-effect waves-light btn" id="addSkill">Add Skills</a>
+
+                     <div class="input-field col s12" id="skillContainer">
+                    </div>
+                   
+                  </div>
+                    
+                  </div>
+                  <div class="input-field col s12">
+                    <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
+                    <input id="txtAwards"  name="txtAwards" type="text" placeholder="Enter your Awards">
+                    </div>
+                    <div class="col m12">
+                         <h4>Things Like to do</h4>
+                    <input id="txtLikes"class="input-field col s12"  name="txtLikes" type="text" placeholder="Your interest">
+                  </div>
+                    <div class="col m12">
+                  <h4>Know Languages</h4>
+                     <input id="txtLikes"class="input-field col s12"  name="txtLanguages" type="text" placeholder="Known Languages">
+                  
+                  </div>
+                    <div class="input-field col s6">
+            <button  type="submit"  id="btnSave" class="waves-effect waves-light btn">Save</button>
+        </div>
+              </form>
+        </div>
+      </div>
+      
+      
+      
+{/bodyContent}

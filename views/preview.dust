@@ -1,0 +1,63 @@
+{>"base"/}
+{<bodyContent}
+{#data}
+
+
+    <div class="row">
+      <div class="col s4 profilebar">
+       <img  class="img-circle" src="/thumbnail?loc={userimg}" height="200" width="200" data-fileloc={filename}>
+               
+      <h3>{profilename}</h3>
+            <h4>{education}</h4>
+            <a href={gitUrl}> <i class="fa fa-github fa-2x icon-space" aria-hidden="true"></i></a>
+            <a href={stackUrl}><i class="fa fa-stack-overflow fa-2x icon-space" aria-hidden="true"></i></a>
+            <a href={linkedinUrl}><i class="fa fa-linkedin fa-2x icon-space" aria-hidden="true"></i></a>
+            <div style="margin-top:30px">
+            <h5 class="headingCustom">About Me</h5>
+            {bio}
+            </div>
+            <h5 class="headingCustom">Things I Like to do</h5>
+            {likes}
+            <h5 class="headingCustom">Language</h5>
+            {languages}
+      </div>
+      <div class="col s8">
+      <h5 class="subheadingCustom">Education</h5>
+        <div>{education}</div>
+
+         <h5 class="subheadingCustom">Skills</h5>
+        <div>{skills}</div>
+          <div class="progress">
+      <div class="determinate" style="width: 70%"></div>
+  </div>
+  
+        
+
+         <h5 class="subheadingCustom">Awards</h5>
+        <div>{awards}</div>
+
+         <h5 class="subheadingCustom">Get in touch with me</h5>
+        <div  class="input-field col s8">
+        <input id="txtName" name="txtName" type="text">
+        <label for="txtName">Full Name</label>
+        </div>
+         <div  class="input-field col s8">
+        <input id="txtEmail" name="txtEmail" type="text">
+        <label for="txtEmail">Full Name</label>
+        </div>
+        <div  class="input-field col s8">
+         <textarea id="txtDescription" class="materialize-textarea"></textarea>
+          <label for="txtDescription">Textarea</label>
+        </div>
+        <div  class="input-field col s8">
+<a class="waves-effect waves-light btn">Save</a>
+        </div>
+
+
+
+      </div>
+      
+    </div>
+          
+{/data}
+{/bodyContent}

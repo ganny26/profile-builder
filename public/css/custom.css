@@ -1,0 +1,70 @@
+
+
+nav {
+    background-color: #3f51b5;
+}
+
+.brand-logo {
+    margin-left: 25px !important;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #3f51b5 !important;
+    text-align: center;
+}
+
+.footer-copyright {
+    background-color: #3f51b5 !important;
+}
+
+.social-links{
+    padding-top: 50px;
+}
+
+.icon-space{
+    margin-left:10px;
+}
+
+.profilebar{
+
+    height: 100% !important; 
+    margin: 0px !important; 
+    padding-bottom: 100% !important;
+    background-color:#45455f;
+    color:white;
+  
+}
+
+.avatar-circle{
+       margin-top:30px;
+    margin-left:150px;
+    border-radius: 50%;
+}
+
+
+.img-circle {
+      margin-top:30px;
+    margin-left:50px;
+    border-radius: 50%;
+}
+
+
+.headingCustom{
+    color:#a9a9ca !important;
+}
+
+.subheadingCustom{
+         width: 800px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: -12px;
+    margin-top: 33px;
+    height: 50px;
+    background: hotpink;
+    color: white;
+}

@@ -1,0 +1,20 @@
+
+    <div class="row">
+    <div class="col m4">
+    <input type="checkbox" id="ruby" />
+      <label for="ruby">ruby</label>
+    </div>
+     <div class="col m6">
+      <input name="group1" type="radio" id="level1" />
+      <label for="level1">Beginer</label>
+      <input name="group1" type="radio" id="level2" />
+      <label for="level2">Intemediate</label>
+      <input  name="group1" type="radio" id="level3"  />
+      <label for="level3">Advanced</label>
+      <input name="group1" type="radio" id="level4"  />
+      <label for="level4">Expert</label>
+
+    </div>
+
+    </div>
+    

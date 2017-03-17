@@ -1,0 +1,24 @@
+{
+  "name": "profile-builder",
+  "version": "1.0.0",
+  "description": "Express JS profile builder application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mime": "^1.3.4",
+    "multer": "^1.3.0",
+    "random-id": "^0.0.2",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "consolidate": "^0.14.5",
+    "dustjs-linkedin": "^2.7.5",
+    "mongoose": "^4.9.0"
+  }
+}

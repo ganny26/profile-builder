@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Express WebApp</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo left">Profile Builder</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/new">Create New</a></li>
+                <li><a href="/">View Profiles</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {+bodyContent/}
+    </div>
+   {! <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Made with Dust JS</h5>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/link1">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/link2">Link 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017
+            </div>
+        </div>
+   </footer>!}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script>
+  $(document).ready(function(){
+
+      $('#addSkill').click(function(){
+         $('#skillContainer').append('<input class="txtSkill"  name="txtSkill" type="text" placeholder="Enter your Skill">');
+         $('#levelContainer').append('<input class="txtLevel"  name="txtLevel" type="text" placeholder="Enter your Percentage">');
+      });
+
+      
+  });
+  </script>
+</body>
+
+</html>

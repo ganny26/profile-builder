@@ -1,0 +1,6 @@
+{>"base"/}
+{<bodyContent}
+<div class="row">
+<h6>Hello {name}, your profile created successfully...</h6>
+</div>
+{/bodyContent}

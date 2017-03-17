@@ -45,15 +45,33 @@
    </footer>!}
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  <script>
+  <script  type="text/javascript">
   $(document).ready(function(){
-
+ $('.modal').modal();
       $('#addSkill').click(function(){
          $('#skillContainer').append('<input class="txtSkill"  name="txtSkill" type="text" placeholder="Enter your Skill">');
          $('#levelContainer').append('<input class="txtLevel"  name="txtLevel" type="text" placeholder="Enter your Percentage">');
       });
+   var skilllevelArr = [];
+      $('#addSkill').click(function(){
+          console.log('clicked');
+          var skillValue = $('#txtSkill').val();
+          var levelValue = $('input[type=radio]:checked').val();
+          $('.skill').append(skillValue+'<br/>');
+          $('.level').append(levelValue+'<br/>');
+       
+          var skillObj = {
+              "skill":skillValue,
+              "level":levelValue
+          };
+          skilllevelArr.push(skillObj);
 
-      
+           $('#skilllevel').attr('data-skilllevel',JSON.stringify(skilllevelArr));
+           $('#skillHide').val(JSON.stringify(skilllevelArr));
+          console.log(skilllevelArr);
+          
+      });
+     
   });
   </script>
 </body>

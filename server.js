@@ -9,6 +9,9 @@ const multer = require('multer');
 const path = require('path');
 const shortid = require('shortid');
 
+var dusthelp = require('dustjs-helpers');
+var fs = require('fs');
+
 
 const PORT = 5000;
 
@@ -64,8 +67,7 @@ var profileDataSchema = new Schema({
     stackUrl: String,
     linkedinUrl: String,
     education: String,
-    skills: String,
-    rating: String,
+    skills: Object,
     awards: String,
     likes: String,
     languages: String,
@@ -126,11 +128,14 @@ app.get('/new', function (req, res) {
 });
 
 app.post('/save', upload.single('profile'), function (req, res) {
+
+    console.log(req.body);
     console.log("File path: " + req.file.path);
     var profile_loc = req.file.path;
     var relFileName = req.file.filename;
 
- 
+     console.log(req.body.skillHide);
+
 
     var profile = {
         profilename: req.body.txtName,
@@ -139,8 +144,7 @@ app.post('/save', upload.single('profile'), function (req, res) {
         stackUrl: "http://stackoverflow.com" + req.body.txtStack,
         linkedinUrl: "http://linkedin.com" + req.body.txtLinkedin,
         education: req.body.txtEducation,
-        skills: req.body.txtSkill,
-        rating: req.body.txtLinkedin,
+        skills: JSON.parse(req.body.skillHide),
         awards: req.body.txtAwards,
         likes: req.body.txtLikes,
         languages: req.body.txtLanguages,

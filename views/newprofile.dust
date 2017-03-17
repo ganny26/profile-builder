@@ -36,7 +36,7 @@
                     <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
                     <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">
                     </div>
-                  <div class="col m12">
+                 {! <div class="col m12">
                   <h4>Skills Sets</h4>
                     <a class="waves-effect waves-light btn" id="addSkill">Add Skills</a>
 
@@ -45,7 +45,41 @@
                    
                   </div>
                     
-                  </div>
+                 </div>!}
+
+                 <div>
+                    <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn" href="#skillModal">Add Skills</a>
+                        <div class="row">
+                            <div class="col m6"><p class="skill"></p></div>
+                            <div class="col m6"><p class="level"></p></div>
+                            <div id="skilllevel" name="skilllevel"></div>
+                        </div>
+                <!-- Modal Structure -->
+                <div id="skillModal" class="modal">
+                    <div class="modal-content">
+                    <h4>Add Skills</h4>
+                        <div class="row">
+                            <div class="col m6">
+                                 <input class="input-field" name="txtSkill" id="txtSkill" type="text" placeholder="Enter your Skill">
+                            </div>
+                             <div class="col m6">
+                                <input name="group1" type="radio" id="level1" value="20" />
+                                <label for="level1">Beginer</label>
+                                <input name="group1" type="radio" id="level2" value="50" />
+                                <label for="level2">Intemediate</label>
+                                <input  name="group1" type="radio" id="level3"  value="75"/>
+                                <label for="level3">Advanced</label>
+                                <input name="group1" type="radio" id="level4"  value="90"/>
+                                <label for="level4">Expert</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" id="addSkill" class=" modal-action modal-close waves-effect waves-green btn-flat">Add Skills</a>
+                    </div>
+                </div>
+                 </div>
                   <div class="input-field col s12">
                     <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
                     <input id="txtAwards"  name="txtAwards" type="text" placeholder="Enter your Awards">
@@ -59,6 +93,7 @@
                      <input id="txtLikes"class="input-field col s12"  name="txtLanguages" type="text" placeholder="Known Languages">
                   
                   </div>
+                  <input type="hidden" value="" name="skillHide" id="skillHide"/>
                     <div class="input-field col s6">
             <button  type="submit"  id="btnSave" class="waves-effect waves-light btn">Save</button>
         </div>

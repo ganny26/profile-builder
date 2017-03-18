@@ -12,7 +12,7 @@
             </div>
             <div class="card-action">
               <a href="/findUser?uniqueId={uniqueId}">View</a>
-              <a href="#">Edit</a>
+              <a href="/edit?uniqueId={uniqueId}">Edit</a>
               <a href="/delete?uniqueId={uniqueId}">Delete</a>    
             </div>
           </div>

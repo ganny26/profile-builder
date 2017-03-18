@@ -1,0 +1,41 @@
+{>"base"/}
+{<bodyContent}
+<h5>Profile Edit</h5>
+
+
+{#data}
+<form method="POST" action="/updateData?uniqueId:{uniqueId}" >
+<div class="input-field col s6">
+          <input  id="profileName" name="profileName" type="text" value="{profilename}">
+          <label for="profileName">Name</label>
+</div>
+<div class="input-field col s6">
+          <input id="gitUrl" name="gitUrl" type="text" value="{gitUrl}">
+          <label for="gitUrl">GitUrl</label>
+</div>
+<div class="input-field col s6">
+          <input id="stackUrl" name="stackUrl" type="text" value="{stackUrl}">
+          <label for="stackUrl">Stack Url</label>
+</div>
+<div class="input-field col s6">
+          <input id="linkedinUrl" name="linkedinUrl" type="text" value="{linkedinUrl}">
+          <label for="linkedinUrl">Linkedin Url</label>
+</div>
+<div class="input-field col s6">
+          <input id="bio" name="bio" type="text" value="{bio}">
+          <label for="bio">Bio</label>
+</div>
+ <button  type="submit"  id="btnUpdate" class="waves-effect waves-light btn">Update</button>
+</form>
+
+
+{/data}
+
+          
+           
+
+ 
+            
+
+
+ {/bodyContent}

@@ -32,13 +32,40 @@
                     <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
                     <input id="txtLinkedin"  name="txtLinkedin" type="text">
                     </div>
-                    <div class="input-field col s12">
-                          <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
-                         <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">
+                    <div>
+                    <h5><i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>Graduation and degree</h5>
+                         {! <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                         <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">!}
+                          <div class="row">
+                            <div class="col m4"><p class="eduName"></p></div>
+                            <div class="col m4"><p class="eduDegree"></p></div>
+                            <div class="col m4"><p class="eduYear"></p></div>
+                            <div id="eduDetails" name="eduDetails"></div>
+                             <!-- Modal Trigger --> 
+                        <a class="waves-effect waves-light btn" href="#eduModal">Add Degree</a>
+                              <!-- Modal Structure -->
+                        <div id="eduModal" class="modal">
+                            <div class="modal-content">
+                            <h4>Add Education</h4>
+                                <div class="row">
+                                    <div class="col m12">
+                                        <input class="input-field" name="txtEduName" id="txtEduName" type="text" placeholder="Enter your inistution name">
+                                    </div>
+                                    <div class="col m12">
+                                        <input class="input-field" name="txtDegree" id="txtDegree" type="text" placeholder="Enter your degree">
+                                    </div>
+                                    <div class="col m12">
+                                        <input class="input-field" name="txtYear" id="txtYear" type="text" placeholder="Year of passing">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="#!" id="addEdu" class=" modal-action modal-close waves-effect waves-green btn-flat">Add Education</a>
+                            </div>
+                        </div>
                     </div>
                      <div>
                      <h4>Skills</h4>
-                   
                         <div class="row">
                             <div class="col m6"><p class="skill"></p></div>
                             <div class="col m6"><p class="level"></p></div>
@@ -86,7 +113,7 @@
                   </div>
                   <input type="hidden" value="" name="skillHide" id="skillHide"/>
                   <input type="hidden" value="" name="educationHide" id="educationHide"/>
-                  <input type="hidden" value="" name="languageHide" id="languageHide"/>
+               
 
                 <div class="input-field col s6">
             <button  type="submit"  id="btnSave" class="waves-effect waves-light btn">Save</button>

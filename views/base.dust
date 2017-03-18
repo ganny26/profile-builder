@@ -48,13 +48,15 @@
   <script  type="text/javascript">
   $(document).ready(function(){
  $('.modal').modal();
-      $('#addSkill').click(function(){
-         $('#skillContainer').append('<input class="txtSkill"  name="txtSkill" type="text" placeholder="Enter your Skill">');
-         $('#levelContainer').append('<input class="txtLevel"  name="txtLevel" type="text" placeholder="Enter your Percentage">');
-      });
    var skilllevelArr = [];
+   var educationArr = [];
     $('.skill').append('<strong>Skills Name</strong><br/>');
      $('.level').append('<strong>Skills Percentage</strong><br/>');
+
+       $('.eduName').append('<strong>Instution </strong><br/>');
+          $('.eduDegree').append('<strong>Degree </strong><br/>');
+          $('.eduYear').append('<strong>Year </strong><br/>');
+
       $('#addSkill').click(function(){
           console.log('clicked');
           var skillValue = $('#txtSkill').val();
@@ -73,6 +75,27 @@
           console.log(skilllevelArr);
           
       });
+
+      $('#addEdu').click(function(){
+          console.log('edu added');
+          var eduNameValue = $('#txtEduName').val();
+          var eduDegreeValue = $('#txtDegree').val();
+          var eduYearValue = $('#txtYear').val();
+          $('.eduName').append(eduNameValue+'<br/>');
+          $('.eduDegree').append(eduDegreeValue+'<br/>');
+          $('.eduYear').append(eduYearValue+'<br/>');
+          var eduObj = {
+              "eduName":eduNameValue,
+              "eduDegree":eduDegreeValue,
+              "eduYear":eduYearValue
+          };
+
+          educationArr.push(eduObj);
+          $('#eduDetails').attr('data-edudetails',JSON.stringify(educationArr));
+          $('#educationHide').val(JSON.stringify(educationArr));
+           console.log(educationArr);
+      });
+     
      
   });
   </script>

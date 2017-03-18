@@ -66,7 +66,7 @@ var profileDataSchema = new Schema({
     gitUrl: String,
     stackUrl: String,
     linkedinUrl: String,
-    education: String,
+    education: Object,
     skills: Object,
     awards: String,
     likes: String,
@@ -122,6 +122,38 @@ app.get('/delete', function (req, res) {
     });
 });
 
+app.post('/updateData',function(req,res){
+    var updataData = {
+ profilename:req.body.profileName,
+ gitUrl:req.body.gitUrl,
+     stackUrl: req.body.stackUrl,
+    linkedinUrl: req.body.linkedinUrl,
+    bio:req.body.bio
+    };
+    console.log(updataData);
+ProfileData.update(({uniqueId:req.query.uniqueId},{$set:updataData}), function (err, data){
+         if (err) {
+            res.status(500);
+            res.send('Internal server error');
+        } else {
+            res.status(200);
+            res.render('update');
+        }
+    }); 
+});
+
+app.get('/edit', function (req, res) {
+    ProfileData.find({ uniqueId: req.query.uniqueId }, function (err, data) {
+        if (err) {
+            res.status(500);
+            res.send('Internal server error');
+        } else {
+            res.status(200);
+            res.render('edit',{data:data});
+        }
+    });
+});
+
 
 app.get('/new', function (req, res) {
     res.render('newprofile');
@@ -140,10 +172,10 @@ app.post('/save', upload.single('profile'), function (req, res) {
     var profile = {
         profilename: req.body.txtName,
         bio: req.body.txtBio,
-        gitUrl: "http://github.com" + req.body.txtGitLink,
-        stackUrl: "http://stackoverflow.com" + req.body.txtStack,
-        linkedinUrl: "http://linkedin.com" + req.body.txtLinkedin,
-        education: req.body.txtEducation,
+        gitUrl: "http://github.com/" + req.body.txtGitLink,
+        stackUrl: "http://stackoverflow.com/" + req.body.txtStack,
+        linkedinUrl: "http://linkedin.com/" + req.body.txtLinkedin,
+        education: JSON.parse(req.body.educationHide),
         skills: JSON.parse(req.body.skillHide),
         awards: req.body.txtAwards,
         likes: req.body.txtLikes,

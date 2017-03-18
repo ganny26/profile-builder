@@ -33,28 +33,19 @@
                     <input id="txtLinkedin"  name="txtLinkedin" type="text">
                     </div>
                     <div class="input-field col s12">
-                    <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
-                    <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">
+                          <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                         <input id="txtEducation"  name="txtEducation" type="text" placeholder="Enter your graduation">
                     </div>
-                 {! <div class="col m12">
-                  <h4>Skills Sets</h4>
-                    <a class="waves-effect waves-light btn" id="addSkill">Add Skills</a>
-
-                     <div class="input-field col s12" id="skillContainer">
-                    </div>
+                     <div>
+                     <h4>Skills</h4>
                    
-                  </div>
-                    
-                 </div>!}
-
-                 <div>
-                    <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn" href="#skillModal">Add Skills</a>
                         <div class="row">
                             <div class="col m6"><p class="skill"></p></div>
                             <div class="col m6"><p class="level"></p></div>
                             <div id="skilllevel" name="skilllevel"></div>
                         </div>
+                         <!-- Modal Trigger --> 
+                        <a class="waves-effect waves-light btn" href="#skillModal">Add Skills</a>
                 <!-- Modal Structure -->
                 <div id="skillModal" class="modal">
                     <div class="modal-content">
@@ -94,7 +85,10 @@
                   
                   </div>
                   <input type="hidden" value="" name="skillHide" id="skillHide"/>
-                    <div class="input-field col s6">
+                  <input type="hidden" value="" name="educationHide" id="educationHide"/>
+                  <input type="hidden" value="" name="languageHide" id="languageHide"/>
+
+                <div class="input-field col s6">
             <button  type="submit"  id="btnSave" class="waves-effect waves-light btn">Save</button>
         </div>
               </form>

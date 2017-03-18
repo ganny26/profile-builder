@@ -1,4 +1,3 @@
-{@contextDump/}
 {>"base"/}
 {<bodyContent}
 
@@ -25,23 +24,23 @@
             </div>
       </div>
       <div class="col s6">
-        <h5>Education</h5>
-         <hr/>
+        <h5 class="sub-content">Education</h5>
+        
          {education}<br/>
-         <h5>Awards</h5>
-         <hr/>
+         <h5 class="sub-content">Awards & Recogitions</h5>
+        
         {awards}
-        <h5>Skills</h5>
-         <hr/>
+        <h5 class="sub-content">Skills</h5>
+        
           {#skills}
           <div>{skill}
           <div class="progress">
-          <div class="determinate" style="width: {level}"></div>{~n}
+          <div class="determinate" style="width: {level}%"></div>{~n}
           </div>
         </div>
       {/skills}
-        <h5>Get in touch with me</h5>
-         <hr/>
+        <h5 class="sub-content">Get in touch with me</h5>
+        
          <div>
            <div class="input-field col s12">
           <input id="txtNameSender" type="text" class="validate">

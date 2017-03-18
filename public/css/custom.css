@@ -58,13 +58,25 @@ footer {
     color:#a9a9ca !important;
 }
 
-.subheadingCustom{
+.sub-content{
+     margin-bottom: 30px;
+    padding: 10px;
+    top: 20px;
+    position: relative;
+    left: -12px;
     width: 800px;
-    padding-left: 20px;
-    padding-top: 10px;
-    margin-left: -12px;
-    margin-top: 33px;
     height: 50px;
     background: hotpink;
     color: white;
+}
+
+.progress{
+    border-radius: 5px;
+        height: 1rem !important;   
+}
+
+.progress .determinate {
+
+    background-color: #755ac5 !important;
+    
 }

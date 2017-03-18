@@ -53,13 +53,15 @@
          $('#levelContainer').append('<input class="txtLevel"  name="txtLevel" type="text" placeholder="Enter your Percentage">');
       });
    var skilllevelArr = [];
+    $('.skill').append('<strong>Skills Name</strong><br/>');
+     $('.level').append('<strong>Skills Percentage</strong><br/>');
       $('#addSkill').click(function(){
           console.log('clicked');
           var skillValue = $('#txtSkill').val();
           var levelValue = $('input[type=radio]:checked').val();
+          var levelText = $('input[type=radio]:checked').next().text();
           $('.skill').append(skillValue+'<br/>');
-          $('.level').append(levelValue+'<br/>');
-       
+          $('.level').append(levelText+' -- '+levelValue+' % '+'<br/>');
           var skillObj = {
               "skill":skillValue,
               "level":levelValue

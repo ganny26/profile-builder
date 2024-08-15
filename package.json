@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0",
     "dustjs-helpers": "^1.7.3",
     "express": "^4.16.0",
     "mime": "^1.4.1",
